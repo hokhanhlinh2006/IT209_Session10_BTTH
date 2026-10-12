@@ -1,6 +1,6 @@
 # Student Management API (IT209_Session10_BTTH)
 
-Hệ thống Spring Boot RESTful API quản lý sinh viên (Student) kết nối MySQL Database, chạy độc lập hoặc triển khai qua Docker & Docker Compose.
+Hệ thống Spring Boot RESTful API quản lý sinh viên (Student) kết nối MySQL Database, sử dụng **Gradle**, chạy độc lập hoặc triển khai qua Docker & Docker Compose.
 
 ---
 
@@ -16,6 +16,7 @@ Hệ thống Spring Boot RESTful API quản lý sinh viên (Student) kết nối
 
 ## 2. Công nghệ sử dụng
 
+- **Build Tool**: Gradle 8.7
 - **Java**: 17
 - **Spring Boot**: 3.2.5 (Spring Web, Spring Data JPA, Lombok, Validation)
 - **Database**: MySQL 8.0
@@ -46,12 +47,12 @@ docker compose up --build -d
 ```
 Ứng dụng API sẽ khởi chạy tại: `http://localhost:8080`
 
-### Cách 2: Chạy trực tiếp từ mã nguồn
+### Cách 2: Chạy trực tiếp từ mã nguồn với Gradle
 1. Khởi động MySQL và tạo database `student_db`.
 2. Cập nhật thông tin kết nối trong `src/main/resources/application.yml` hoặc set biến môi trường.
 3. Chạy lệnh:
 ```bash
-mvn clean spring-boot:run
+./gradlew bootRun
 ```
 
 ---
